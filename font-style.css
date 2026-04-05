@@ -1,0 +1,159 @@
+audio { display:none;}
+.box {
+  width: 300px;
+  height: 900px;
+
+  /*display: flex;*/
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.box p {
+  margin: 0 auto;          /* removes default top space */
+  width: 100%;
+}
+/* Default (mobile) */
+h1 {
+  font-size: 48px;
+}
+
+p {
+  font-size: 20px;
+}
+
+/* PC / bigger screens */
+@media (min-width: 768px) {
+  .box {
+  width: 600px;
+  height: 5200px;
+
+  /*display: flex;*/
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.box p {
+  margin: 0 auto;          /* removes default top space */
+  width: 100%;
+}
+  h1 {
+    font-size: 96px;
+  }
+
+  p {
+    font-size: 66px;
+  }
+}
+@font-face {
+  font-family: "good_dog";
+  src: url("gooddog.ttf") format("truetype");
+}
+@font-face {
+  font-family: "kissing_season";
+  src: url("Kissing Season.ttf") format("truetype");
+}
+@font-face {
+  font-family: "source";
+  src: url("source.ttf") format("truetype");
+}
+
+a, span, p, li {
+  font-family: "good_dog", "Noto Sans", sans-serif;
+  color: white;
+  overflow-wrap: break-word;
+}
+
+h1, h2, h3, .ass {
+  font-family: "kissing_season", "Arial", sans-serif;
+  color: white;
+}
+
+.small-text p {
+  font-size: inherit;
+  font-family: "source", sans-serif;
+  color: white;
+}
+
+wave span {
+  display: inline-block;
+  animation: wave 1s infinite;
+}
+pulse span {
+  display: inline-block;
+}
+wave, pulse, wave span, pulse span {
+  font-family: inherit;
+  color: white;
+}
+body {
+  margin: 0;
+  height: 200vh; /* allow scroll */
+  font-family: sans-serif;
+  color: white;
+}
+
+.parallax-bg {
+  position: fixed;   /* stays behind everything */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120%;      /* bigger so it can move */
+
+  background-image: url("bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  z-index: -1;       /* puts it behind content */
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  padding: 50px;
+  color: white;
+}
+/* Full black screen */
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: opacity 1s ease;
+}
+
+/* Fade out state */
+#overlay.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Center text */
+#tap-text {
+  color: white;
+  font-size: 24px;
+  letter-spacing: 3px;
+  animation: pulse 1.5s infinite;
+}
+
+/* Subtle animation */
+@keyframes pulse {
+  0% { opacity: 0.4; }
+  50% { opacity: 1; }
+  100% { opacity: 0.4; }
+}
+
+
+
