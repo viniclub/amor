@@ -21,6 +21,6 @@ window.addEventListener("scroll", () => {
   const bg = document.querySelector(".parallax-bg");
   const offset = -window.scrollY;
 
-  /*bg.style.transform = `translateY(${offset * 0.1}px)`;*/
+  bg.style.transform = `translateY(${offset * 0.1}px)`;
 });
 
